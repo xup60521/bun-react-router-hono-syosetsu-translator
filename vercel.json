@@ -4,5 +4,6 @@
     "rewrites": [
         { "source": "/api/(.*)", "destination": "/api/server.ts" },
         { "source": "/(.*)", "destination": "/dist/index.html" }
-    ]
+    ],
+    "outputDirectory": "dist"
 }
