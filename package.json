@@ -8,7 +8,7 @@
         "dev:web": "bun --hot ./dev.ts",
         "dev:qstash": "npm exec -- @upstash/qstash-cli dev --port=8081",
         "start": "NODE_ENV=production bun src/index.ts",
-        "build": "bun run build.ts ./src/index.html"
+        "build": "bun run build.ts ./src/index.html --public-path /"
     },
     "dependencies": {
         "@ai-sdk/cerebras": "^2.0.27",
