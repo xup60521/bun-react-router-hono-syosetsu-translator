@@ -1,6 +1,6 @@
 import { serve } from "bun";
-import index from "./index.html";
-import app from "./server";
+import index from "./src/index.html";
+import app from "./api/server";
 
 const server = serve({
     routes: {
