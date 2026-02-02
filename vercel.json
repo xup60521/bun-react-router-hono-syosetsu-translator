@@ -2,7 +2,7 @@
     "$schema": "https://openapi.vercel.sh/vercel.json",
     "bunVersion": "1.x",
     "rewrites": [
-        { "source": "/api/(.*)", "destination": "/dist/server.js" },
+        { "source": "/api/(.*)", "destination": "/server/server.ts" },
         { "source": "/(.*)", "destination": "/dist/index.html" }
     ],
     "outputDirectory": "dist"
