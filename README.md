@@ -1,5 +1,8 @@
 # bun-react-tailwind-shadcn-template
 
+[x] Local Server
+[] Serverless (Vercel)
+
 To install dependencies:
 
 ```bash
