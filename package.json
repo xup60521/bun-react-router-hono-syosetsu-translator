@@ -8,7 +8,9 @@
         "dev:web": "bun --hot ./dev.ts",
         "dev:qstash": "npm exec -- @upstash/qstash-cli dev --port=8081",
         "start": "NODE_ENV=production bun src/index.ts",
-        "build": "bun run build.ts ./src/index.html --public-path /"
+        "build": "run-p build:frontend build:backend",
+        "build:frontend": "bun run build.ts ./src/index.html --public-path /",
+        "build:backend": "bun build ./api/server.ts --outfile dist/api/server.js --target=bun --minify"
     },
     "dependencies": {
         "@ai-sdk/cerebras": "^2.0.27",
@@ -61,10 +63,10 @@
         "string-similarity-js": "^2.1.4",
         "tailwind-merge": "^3.3.1",
         "urlpattern-polyfill": "^10.1.0",
-        "zod": "^4.3.6"
+        "zod": "^4.3.6",
+        "npm-run-all": "^4.1.5"
     },
     "devDependencies": {
-        "npm-run-all": "^4.1.5",
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "@types/bun": "latest",
