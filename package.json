@@ -8,9 +8,9 @@
         "dev:web": "bun --hot ./dev.ts",
         "dev:qstash": "npm exec -- @upstash/qstash-cli dev --port=8081",
         "start": "NODE_ENV=production bun src/index.ts",
-        "build": "run-p build:frontend build:backend",
+        "build": "bun run build:frontend",
         "build:frontend": "bun run build.ts ./src/index.html --public-path /",
-        "build:backend": "bun build ./server/server.ts --outfile ./dist/server.js --target=bun"
+        "build:backend": "bun build ./server/server.ts --outfile ./api/index.js --target=bun --minify"
     },
     "dependencies": {
         "@ai-sdk/cerebras": "^2.0.27",
