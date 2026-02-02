@@ -10,7 +10,7 @@
         "start": "NODE_ENV=production bun src/index.ts",
         "build": "run-p build:frontend build:backend",
         "build:frontend": "bun run build.ts ./src/index.html --public-path /",
-        "build:backend": "bun build ./server/server.ts --outfile ./api/index.js --target=bun"
+        "build:backend": "bun build ./server/server.ts --outfile ./dist/server.js --target=bun"
     },
     "dependencies": {
         "@ai-sdk/cerebras": "^2.0.27",
