@@ -5,12 +5,10 @@
     "type": "module",
     "scripts": {
         "dev": "run-p dev:web dev:qstash",
-        "dev:web": "bun --hot ./dev.ts",
+        "dev:web": "bun --hot ./src/index.ts",
         "dev:qstash": "npm exec -- @upstash/qstash-cli dev --port=8081",
-        "start": "NODE_ENV=production bun src/index.ts",
-        "build": "bun run build:frontend",
-        "build:frontend": "bun run build.ts ./src/index.html --public-path /",
-        "build:backend": "bun build ./server/server.ts --outfile ./api/index.js --target=bun --minify"
+        "start": "NODE_ENV=production bun ./src/index.ts",
+        "build": "bun run build.ts --public-path /"
     },
     "dependencies": {
         "@ai-sdk/cerebras": "^2.0.27",

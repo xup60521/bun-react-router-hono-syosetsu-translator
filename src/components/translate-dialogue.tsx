@@ -25,7 +25,7 @@ import { Button } from "./ui/button";
 import { toast } from "sonner";
 import { authClient } from "@/lib/auth-client";
 import { useApikeyQuery } from "@/data/apikeyQuery";
-import type { DecomposedURL } from "../../server/routes/decompose";
+import type { DecomposedURL } from "../../api/routes/decompose";
 import { client } from "@/lib/api";
 import { useNavigate } from "react-router-dom";
 

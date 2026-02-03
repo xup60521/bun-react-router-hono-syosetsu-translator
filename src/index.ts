@@ -1,12 +1,13 @@
 import { serve } from "bun";
-import index from "./src/index.html";
-import app from "./server/server";
+import index from "./index.html";
+import app from "api";
 
 const server = serve({
     routes: {
-        "/api/*": app.fetch,
         // Serve index.html for all unmatched routes.
-        "/**": index,
+        "/*": index,
+
+        "/api/*": app.fetch,
     },
 
     development: process.env.NODE_ENV !== "production" && {
